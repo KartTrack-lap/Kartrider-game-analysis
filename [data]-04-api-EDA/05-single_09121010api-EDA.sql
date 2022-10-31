@@ -253,6 +253,7 @@ order by 2,3;
 # 조건 2. start와 end가 match_start_time이 아닌 3건을 제외
 # 조건 3. ERD에 맞게 column명 변경
 
+
 CREATE TABLE single_speed_0912_1010_fin
 SELECT T1.matchId AS id
 	   ,T2.trackId AS track_id
@@ -263,8 +264,8 @@ SELECT T1.matchId AS id
        ,T2.rankinggrade2 AS user_licence
        ,T2.matchRank as match_rank
        ,T2.matchRetired AS retired
-       ,T2.matchWin AS record
-       ,T2.matchTime AS match_time
+       ,T2.matchWin AS result
+       ,T2.matchTime AS record
        ,T2.matchtype AS match_type_id
 FROM
 (SELECT matchId
@@ -275,6 +276,9 @@ LEFT JOIN
 FROM single_speed_0912_1010) AS T2 #matchRank에 1이 존재하는 matchId를 기준으로 LeftJoin해주면, 모든 유저가 완주하지 않는 매치는 포함되지 않는다. 
 ON T1.matchId = T2.matchId
 WHERE T1.matchId NOT IN ('00ed000b3df1ab9a','031d000b6dc5b78d','031d000b6dc5b78d'); #start와 end가 match_start_time이 아닌 3건을 제외해준다.
+
+
+
 
 
 # (3) 생성한 테이블을 검증한다. 
@@ -365,19 +369,22 @@ match_map AS
 	LEFT JOIN 
 	track_name AS T2
 	ON T1.track_id = T2.trackId)
-SELECT T4.map_name
-	   ,SUM(cnt_retire_user) AS cnt_retire_user
-       ,SUM(cnt_user) AS cnt_user
-       ,(SUM(cnt_retire_user)/SUM(cnt_user))*100 AS percent_retire
-FROM 
-( # matchId 별 리타이어한 유저 수, 플레이 한 전체 유저 수 계산
-SELECT T1.id
-	   ,COALESCE(T2.cnt_retire_user,0) AS cnt_retire_user  #cnt_retire_player가 NULL값이면 리타이어된 유저가 없다는 말이어서 0으로 변환준다.
-	   ,T1.cnt_user
-FROM all_player AS T1 LEFT JOIN retire_player AS T2 ON T1.id = T2.id) AS T3
-LEFT JOIN match_map AS T4  
-ON T3.id = T4.id
-GROUP BY 1;
+-- SELECT T4.map_name
+-- 	   ,SUM(cnt_retire_user) AS cnt_retire_user
+--        ,SUM(cnt_user) AS cnt_user
+--        ,(SUM(cnt_retire_user)/SUM(cnt_user))*100 AS percent_retire
+-- FROM 
+-- ( # matchId 별 리타이어한 유저 수, 플레이 한 전체 유저 수 계산
+-- SELECT T1.id
+-- 	   ,COALESCE(T2.cnt_retire_user,0) AS cnt_retire_user  #cnt_retire_player가 NULL값이면 리타이어된 유저가 없다는 말이어서 0으로 변환준다.
+-- 	   ,T1.cnt_user
+-- FROM all_player AS T1 LEFT JOIN retire_player AS T2 ON T1.id = T2.id) AS T3
+-- LEFT JOIN match_map AS T4  
+-- ON T3.id = T4.id
+-- GROUP BY 1;
+# 매치당 평균 플레이어 수
+SELECT *
+FROM all_player;
 
 
 # 추가 확인 : 메타데이터에 map_name이 없는 7개의 track_id
@@ -389,7 +396,6 @@ LEFT JOIN
 track_name AS T2
 ON T1.track_id = T2.trackId
 where map_name is null;
-
 
 
 
@@ -454,3 +460,4 @@ FROM track_cnt AS T1 LEFT JOIN
 match_time_user AS T2 ON T1.map_name = T2.map_name LEFT JOIN
 retire_cnt AS T3 ON T1.map_name = T3.map_name
 ORDER BY 2 DESC;
+
