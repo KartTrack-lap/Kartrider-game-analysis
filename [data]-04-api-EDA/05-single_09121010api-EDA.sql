@@ -287,7 +287,7 @@ WHERE T1.matchId NOT IN ('00ed000b3df1ab9a','031d000b6dc5b78d','031d000b6dc5b78d
 #검증 결과 : 검증 완료
 SELECT DISTINCT match_rank
 FROM single_speed_0912_1010_fin
-WHERE record = 1;
+WHERE result = 1;
 
 #(3)-2 start와 end는 match_start_time 기준이 아닌 데이터가 잘 삭제되었는지 확인한다.
 #검증결과 : 검증 완료
@@ -322,23 +322,41 @@ FROM single_speed_0912_1010_fin;
 # (5) 주요 지표 계산   
 
 # (5)-1 트랙별 사용 건 수 : cnt_match
-SELECT T2.map_name, T1.cnt_match
+SELECT T1.track_id, T1.cnt_match
 FROM (SELECT track_id, COUNT(DISTINCT id) AS cnt_match
 FROM single_speed_0912_1010_fin
 GROUP BY 1
-ORDER BY 2 DESC) AS T1 
-LEFT JOIN track_name AS T2 ON T1.track_id = T2.trackId;
+ORDER BY 2 DESC) AS T1;
+
+-- SELECT T2.map_name, T1.cnt_match
+-- FROM (SELECT track_id, COUNT(DISTINCT id) AS cnt_match
+-- FROM single_speed_0912_1010_fin
+-- GROUP BY 1
+-- ORDER BY 2 DESC) AS T1 
+-- LEFT JOIN track_name AS T2 ON T1.track_id = T2.trackId;
+
 
 # (5)-2 트랙별 주행 시간 : AVG_match_time = SUM_match_time(match_time 합) / match_time이 있는 유저수
-SELECT T2.map_name, T1.SUM_match_time, T1.AVG_match_time
+SELECT T1.track_id, T1.SUM_record, T1.AVG_record
 FROM (SELECT track_id
-	   ,SUM(match_time) AS SUM_match_time
-       ,AVG(match_time) AS AVG_match_time
+	   ,SUM(record) AS SUM_record
+       ,AVG(record) AS AVG_record
 FROM single_speed_0912_1010_fin
-WHERE match_time IS NOT NULL
+WHERE record IS NOT NULL
 GROUP BY 1
-ORDER BY 2 DESC) AS T1 
-LEFT JOIN track_name AS T2 ON T1.track_id = T2.trackId;
+ORDER BY 2 DESC) AS T1 ;
+
+
+-- SELECT T2.map_name, T1.SUM_match_time, T1.AVG_match_time
+-- FROM (SELECT track_id
+-- 	   ,SUM(match_time) AS SUM_match_time
+--        ,AVG(match_time) AS AVG_match_time
+-- FROM single_speed_0912_1010_fin
+-- WHERE match_time IS NOT NULL
+-- GROUP BY 1
+-- ORDER BY 2 DESC) AS T1 
+-- LEFT JOIN track_name AS T2 ON T1.track_id = T2.trackId;
+
 
 
 
@@ -360,31 +378,22 @@ all_player AS
 	FROM single_speed_0912_1010_fin
 	WHERE match_rank !=0
 	GROUP BY 1),
-match_map AS
-( # 매치별 맵 네임 
-	SELECT T1.id, T2.map_name
-	FROM
-	(SELECT id, track_id
-	FROM single_speed_0912_1010_fin) AS T1
-	LEFT JOIN 
-	track_name AS T2
-	ON T1.track_id = T2.trackId)
--- SELECT T4.map_name
--- 	   ,SUM(cnt_retire_user) AS cnt_retire_user
---        ,SUM(cnt_user) AS cnt_user
---        ,(SUM(cnt_retire_user)/SUM(cnt_user))*100 AS percent_retire
--- FROM 
--- ( # matchId 별 리타이어한 유저 수, 플레이 한 전체 유저 수 계산
--- SELECT T1.id
--- 	   ,COALESCE(T2.cnt_retire_user,0) AS cnt_retire_user  #cnt_retire_player가 NULL값이면 리타이어된 유저가 없다는 말이어서 0으로 변환준다.
--- 	   ,T1.cnt_user
--- FROM all_player AS T1 LEFT JOIN retire_player AS T2 ON T1.id = T2.id) AS T3
--- LEFT JOIN match_map AS T4  
--- ON T3.id = T4.id
--- GROUP BY 1;
-# 매치당 평균 플레이어 수
-SELECT *
-FROM all_player;
+match_map_id AS
+( # 매치별 맵 id
+	SELECT id, track_id
+	FROM single_speed_0912_1010_fin)
+SELECT T4.track_id
+	   ,SUM(cnt_retire_user) AS cnt_retire_user
+       ,SUM(cnt_user) AS cnt_user
+       ,(SUM(cnt_retire_user)/SUM(cnt_user))*100 AS percent_retire
+FROM 
+( # matchId 별 리타이어한 유저 수, 플레이 한 전체 유저 수 계산
+SELECT T1.id
+	   ,COALESCE(T2.cnt_retire_user,0) AS cnt_retire_user  #cnt_retire_player가 NULL값이면 리타이어된 유저가 없다는 말이어서 0으로 변환준다.
+	   ,T1.cnt_user
+FROM all_player AS T1 LEFT JOIN retire_player AS T2 ON T1.id = T2.id) AS T3
+LEFT JOIN match_map_id AS T4 ON T3.id = T4.id
+GROUP BY 1;
 
 
 # 추가 확인 : 메타데이터에 map_name이 없는 7개의 track_id
@@ -401,24 +410,22 @@ where map_name is null;
 
 ###### 위에서 구한 주요 지표 하나의 테이블로 합치기 
 With track_cnt AS(
-		SELECT T2.map_name, T1.cnt_match
+		SELECT T1.track_id, T1.cnt_match
 		FROM (SELECT track_id, COUNT(DISTINCT id) AS cnt_match
 		FROM single_speed_0912_1010_fin
 		GROUP BY 1
-		ORDER BY 2 DESC) AS T1 
-		LEFT JOIN track_name AS T2 ON T1.track_id = T2.trackId), 
+		ORDER BY 2 DESC) AS T1), 
 match_time_user AS(
-		SELECT T2.map_name, T1.SUM_match_time, T1.AVG_match_time
+		SELECT T1.track_id, T1.SUM_record, T1.AVG_record
 		FROM (SELECT track_id
-			   ,SUM(match_time) AS SUM_match_time
-			   ,AVG(match_time) AS AVG_match_time
+			   ,SUM(record) AS SUM_record
+			   ,AVG(record) AS AVG_record
 		FROM single_speed_0912_1010_fin
-		WHERE match_time IS NOT NULL
+		WHERE record IS NOT NULL
 		GROUP BY 1
-		ORDER BY 2 DESC) AS T1 
-		LEFT JOIN track_name AS T2 ON T1.track_id = T2.trackId),
+		ORDER BY 2 DESC) AS T1),
 retire_cnt AS(
-		SELECT T4.map_name
+		SELECT T4.track_id
 			   ,SUM(cnt_retire_user) AS cnt_retire_user
 			   ,SUM(cnt_user) AS cnt_user
 			   ,(SUM(cnt_retire_user)/SUM(cnt_user))*100 AS percent_retire
@@ -429,7 +436,7 @@ retire_cnt AS(
 			   ,T1.cnt_user
 		FROM 
 		   (SELECT id
-			   ,COUNT(DISTINCT user_id) AS cnt_user
+			   ,COUNT(user_id) AS cnt_user
 			FROM single_speed_0912_1010_fin
 			WHERE match_rank !=0
 			GROUP BY 1) AS T1 
@@ -440,24 +447,22 @@ retire_cnt AS(
 			 WHERE match_rank=99
 			 GROUP BY 1)AS T2 ON T1.id = T2.id) AS T3
 		LEFT JOIN 
-			(SELECT T1.id, T2.map_name
-			 FROM (SELECT id, track_id
-				   FROM single_speed_0912_1010_fin) AS T1
-			 LEFT JOIN 
-			 track_name AS T2
-			 ON T1.track_id = T2.trackId) AS T4  
+			(SELECT id, track_id
+			 FROM single_speed_0912_1010_fin) AS T4  
 		ON T3.id = T4.id
 		GROUP BY 1)
 
-SELECT T1.map_name
+SELECT T4.map_name
+		,T1.track_id
 		,T1.cnt_match
 		,T3.cnt_user
 		,T3.cnt_retire_user
 		,T3.percent_retire
-		,T2.SUM_match_time
-		,T2.AVG_match_time
+		,T2.SUM_record
+		,T2.AVG_record
 FROM track_cnt AS T1 LEFT JOIN
-match_time_user AS T2 ON T1.map_name = T2.map_name LEFT JOIN
-retire_cnt AS T3 ON T1.map_name = T3.map_name
+match_time_user AS T2 ON T1.track_id = T2.track_id LEFT JOIN
+retire_cnt AS T3 ON T1.track_id = T3.track_id LEFT JOIN
+track_name AS T4 ON T1.track_id = T4.trackId
 ORDER BY 2 DESC;
 
