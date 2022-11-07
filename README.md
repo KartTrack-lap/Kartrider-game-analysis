@@ -12,6 +12,6 @@
   * 김시은 : goodkse7@gmail.com
   * 김혜민 : hyeming155@gmail.com
   * 김효진 : gywls630010@gmail.com
-  * 박지윤 : wldbs6769@gmail.com
+  * 박지윤 : jiyunjune.da@gmail.com
   * 이지윤 : lkjyoonok@gmail.com
-  * 장회정 : hoijung0828@gmail.com
+  * 장회정 : hoinnovation@naver.com
