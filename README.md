@@ -257,8 +257,8 @@ $$
 <p align="center"><img src =https://user-images.githubusercontent.com/111565156/204599654-65de149b-fd6d-4fb2-ba92-a52062836e5d.png>
 
 
-**‘트랙 제작’과 관련 자세한 내용을 확인하고 싶으시면, 아래 위키 페이지를 참고해주세요.*
-    - *[트랙 제작](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/10.-%ED%8A%B8%EB%9E%99-%EC%A0%9C%EC%9E%91)*
+**‘트랙 제작’과 관련 자세한 내용을 확인하고 싶으시면, 아래 위키 페이지를 참고해주세요.*   
+  - [트랙 제작](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/10.-%ED%8A%B8%EB%9E%99-%EC%A0%9C%EC%9E%91)
   
 <br/>
  <br/>
