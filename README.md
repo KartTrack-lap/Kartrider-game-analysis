@@ -44,6 +44,7 @@
 
 
 ## 2. ERD 테이블
+_*ERD와 관련하여 자세한 내용을 확인하고 싶으시면, [ERD 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/12.-ERD)를 참고해주세요._
 
 - ERD 구조
     
@@ -55,15 +56,12 @@
     
     <p align="center"><img src =https://user-images.githubusercontent.com/111565156/204596067-5ed5931d-787f-4e60-9f7a-6e88f93f7f98.png>
 
-
-**ERD와 관련하여 자세한 내용을 확인하고 싶으시면,아래 위키 페이지를 참고해주세요.*
-
-- *[ERD 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/12.-ERD)*
   
 <br/>
  <br/>
      
 # 5️⃣ 디렉토리 설명
+_*디렉토리와 관련하여 자세한 내용을 확인하고 싶으시면, [디렉토리 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/13.-Github-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EC%84%A4%EB%AA%85)를 참고해주세요._
 
 ```html
 ├── api
@@ -97,10 +95,6 @@
 │	└── survey-wordcloud.ipynb
 └── README.md
 ```
-
-**디렉토리와 관련하여 자세한 내용을 확인하고 싶으시면, 아래 위키 페이지를 참고해주세요.*
-
-- *[디렉토리 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/13.-Github-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC-%EC%84%A4%EB%AA%85)*
   
 <br/>
 <br/>
@@ -114,13 +108,10 @@
 
 ---
 
-## 2. 독립변수 선정
+## 2. 독립변수 선정을 위한 설문조사 진행
+_*설문조사와 관련하여 자세한 내용을 확인하고 싶으시면, [설문조사 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/02.-%EC%84%A4%EB%AC%B8%EC%A1%B0%EC%82%AC)를 참고해주세요._
 
 - 독립변수를 설정하기 위해 크레이지레이싱 카트라이더 유저를 대상으로 설문조사 진행했습니다.
-
-- **설문조사와 관련하여 자세한 내용을 확인하고 싶으시면, 아래 위키 페이지를 참고해주세요.*
-
-- *[설문조사 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/02.-%EC%84%A4%EB%AC%B8%EC%A1%B0%EC%82%AC)*  
      
 - 설문조사는 10/19~10/25 동안 진행하였고, 총 120명의 응답을 확보하였습니다. 이를 통해 유저가 트랙을 선택할 때 중요하게 생각하는 요소를 파악해 워드클라우드로 표현했습니다.
 
@@ -138,7 +129,7 @@
 ## 3. 데이터 수집
 
 - 선정한 독립변수와 관련하여 데이터를 수집하기 위해 api, scraping, 트랙 데이터 자체수집을 진행하였습니다.
-- *각 데이터와 관련하여 자세한 내용을 확인하고 싶으시면, 아래 위키 페이지를 참고해주세요.*
+- 각 데이터와 관련하여 자세한 내용을 확인하고 싶으시면, 아래 위키 페이지를 참고해주세요.
     - [api 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/03.-api)
     - [scraping 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/04.-scraping)
     - [트랙 데이터 자체수집 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/05.-%ED%8A%B8%EB%9E%99-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%9E%90%EC%B2%B4-%EC%88%98%EC%A7%91)
@@ -150,7 +141,8 @@
 ## 4. 데이터 분석
 
 ### 1) **종속변수가 ‘트랙 사용 수’인 회귀분석 진행.**
-
+_*종속변수가 `트랙 사용 수`인 회귀분석과 관련하여 자세한 내용을 확인하고 싶으시면, ['트랙 사용 수' 분석 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/06.-'%EC%A2%85%EC%86%8D-%EB%B3%80%EC%88%98-:-%ED%8A%B8%EB%9E%99-%EC%82%AC%EC%9A%A9-%EC%88%98'-%ED%9A%8C%EA%B7%80-%EB%B6%84%EC%84%9D)를 참고해주세요._
+     
 <p align="center"><img src =https://user-images.githubusercontent.com/111565156/204597334-361f303a-ca33-466f-8e6a-9239740ed725.png>
 
 
@@ -161,12 +153,11 @@
 - 특히 주목해야하는 점은 단일 회귀 분석으로 `트랙 사용 수` 를 21% 설명하는 `평균 주행시간`이 증가할수록 `트랙 사용 수`가 감소한다는 것입니다. 
 다시 말해, “평균 주행시간을 낮춰야 트랙을 많이 사용한다.” 는 것을 알 수 있습니다.  
  <br/>
-*종속변수가 `트랙 사용 수`인 회귀분석과 관련하여 자세한 내용을 확인하고 싶으시면, 아래 위키 페이지를 참고해주세요.  
   
-- *['트랙 사용 수' 분석 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/06.-'%EC%A2%85%EC%86%8D-%EB%B3%80%EC%88%98-:-%ED%8A%B8%EB%9E%99-%EC%82%AC%EC%9A%A9-%EC%88%98'-%ED%9A%8C%EA%B7%80-%EB%B6%84%EC%84%9D)*
 ---
 
 ### 2) **종속변수가 ‘평균 주행시간’인 회귀분석 진행**
+_*종속변수가 `평균 주행 시간` 인 회귀분석과 관련하여 자세한 내용을 확인하고 싶으시면, ['평균 주행 시간' 분석 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/07.-'%EC%A2%85%EC%86%8D-%EB%B3%80%EC%88%98-:-%ED%8F%89%EA%B7%A0-%EC%A3%BC%ED%96%89-%EC%8B%9C%EA%B0%84'-%ED%9A%8C%EA%B7%80-%EB%B6%84%EC%84%9D)를 참고해주세요._
 
 <p align="center"><img src =https://user-images.githubusercontent.com/111565156/204597517-bb856d0a-39b8-4858-bbdc-e3869fab53e3.png>
 
@@ -186,8 +177,6 @@
      **따라서 `평균 주행 시간`을 줄이기 위해서는 `내리막길 비율`을 줄여야 합니다.**
 <br/>
 <br/>
-*종속변수가 `평균 주행 시간` 인 회귀분석과 *관련하여 자세한 내용을 확인하고 싶으시면, 아래 위키 페이지를 참고해주세요.*
-- *['평균 주행 시간' 분석 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/07.-'%EC%A2%85%EC%86%8D-%EB%B3%80%EC%88%98-:-%ED%8F%89%EA%B7%A0-%EC%A3%BC%ED%96%89-%EC%8B%9C%EA%B0%84'-%ED%9A%8C%EA%B7%80-%EB%B6%84%EC%84%9D)*
 
 ---
 
@@ -197,6 +186,7 @@
 ---
 
 ### 3) **종속변수가 ‘난이도’인 회귀분석 진행**
+_*종속변수가 `난이도` 인 회귀분석과 관련하여 자세한 내용을 확인하고 싶으시면, ['난이도' 분석 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/08.-'%EC%A2%85%EC%86%8D-%EB%B3%80%EC%88%98-:-%EB%82%9C%EC%9D%B4%EB%8F%84'-%ED%9A%8C%EA%B7%80-%EB%B6%84%EC%84%9D)를 참고해주세요._
 
 <p align="center"><img src =https://user-images.githubusercontent.com/111565156/204597648-993f748e-bf69-4e1d-96d7-39890dee3bfe.png>
 
@@ -208,9 +198,6 @@
     
 - 트랙의 `난이도` 에는 `펜스 없는 구간 유무` , `내리막길 개수` , `전체 직선 개수` , `트랙 이동 개수` , `감속 트리거 개수` , `점프 트리거 개수` , `헤어핀 구간 개수`, `전체 곡선 구간 개수`, `전체 장애물 개수` 가 영향을 준다는 것을 알 수 있었습니다.
  <br/>
-*종속변수가 `난이도` 인 회귀분석과 관련하여 자세한 내용을 확인하고 싶으시면, 아래 위키 페이지를 참고해주세요.  
-  
-- *['난이도' 분석 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/08.-'%EC%A2%85%EC%86%8D-%EB%B3%80%EC%88%98-:-%EB%82%9C%EC%9D%B4%EB%8F%84'-%ED%9A%8C%EA%B7%80-%EB%B6%84%EC%84%9D)*  
  
 ---
 
@@ -229,11 +216,10 @@
 ---
 
 ## 6. 트랙 계산기와 트랙 제작
+_*‘트랙 계산기 개발’과 관련 자세한 내용을 확인하고 싶으시면, [트랙 계산기 개발 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/09.-%ED%8A%B8%EB%9E%99-%EA%B3%84%EC%82%B0%EA%B8%B0-%EA%B0%9C%EB%B0%9C)를 참고해주세요._  
+_*‘트랙 제작’과 관련 자세한 내용을 확인하고 싶으시면, [트랙 제작 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/10.-%ED%8A%B8%EB%9E%99-%EC%A0%9C%EC%9E%91)를 참고해주세요._  
 
 - 분석 결과를 활용하여 트랙 계산기를  개발하였습니다.
-- ‘*트랙 계산기 개발’과 관련 자세한 내용을 확인하고 싶으시면, 아래 위키 페이지를 참고해주세요.*
-    - *[트랙 계산기 개발](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/09.-%ED%8A%B8%EB%9E%99-%EA%B3%84%EC%82%B0%EA%B8%B0-%EA%B0%9C%EB%B0%9C)*
-    
     위 링크로 접속하면 트랙 계산기를 이용할 수 있습니다.  
     아래와 같이 각 조건을 입력하면, 난이도와 예상 평균 주행시간을 알 수 있습니다. 
     <p align="center"><img src = "https://user-images.githubusercontent.com/111565156/204597897-c55c3a81-7a3a-4d95-b51f-60e7eadcfd28.png" width = "20%" height = "20%">
@@ -245,18 +231,11 @@
 <p align="center"><img src =https://user-images.githubusercontent.com/111565156/204599654-65de149b-fd6d-4fb2-ba92-a52062836e5d.png>
 
 
-**‘트랙 제작’과 관련 자세한 내용을 확인하고 싶으시면, 아래 위키 페이지를 참고해주세요.*   
-  - [트랙 제작](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/10.-%ED%8A%B8%EB%9E%99-%EC%A0%9C%EC%9E%91)
   
 <br/>
  <br/>
  
 # 7️⃣ 팀원 소개 및 컨택트 정보
-
-팀 ‘카트타고 출근’의 팀원은 다음과 같습니다. 
+_*팀원에 관련하여 자세한 내용을 확인하고 싶으시면 [팀원 소개 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/%EC%B9%B4%ED%8A%B8%ED%83%80%EA%B3%A0-%EC%B6%9C%EA%B7%BC-%ED%8C%80-%EC%86%8C%EA%B0%9C)를 참고해주세요._
 
 <p align="center"><img src =https://user-images.githubusercontent.com/111565156/204600307-7f57840a-57cc-46de-ad40-8a57152ef1b4.png>
-
-**팀원에 관련하여 자세한 내용을 확인하고 싶으시면 아래 위키 페이지를 참고해주세요.*
-
- - *[팀원 소개 위키](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/%EC%B9%B4%ED%8A%B8%ED%83%80%EA%B3%A0-%EC%B6%9C%EA%B7%BC-%ED%8C%80-%EC%86%8C%EA%B0%9C)*
