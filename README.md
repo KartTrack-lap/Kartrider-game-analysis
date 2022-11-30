@@ -226,7 +226,8 @@ _*‘트랙 제작’과 관련 자세한 내용을 확인하고 싶으시면, [
 
 - 분석 결과를 활용하여 트랙 계산기를  개발하였습니다.
     [트랙 계산기 링크](https://track-calculator.bubbleapps.io/version-test/calculator)로 접속하면 트랙 계산기를 이용할 수 있습니다.  
-    트랙 계산기 화면은 아래와 같이 구성되어 있습니다. 트랙 구성요소들을 계산기에 넣으면 평균 주행시간과 난이도를 알 수 있습니다 
+    트랙 계산기 화면은 아래와 같이 구성되어 있습니다. 트랙 구성요소들을 계산기에 넣으면 평균 주행시간과 난이도를 알 수 있습니다.  
+    
     <img src = "https://user-images.githubusercontent.com/111565156/204597897-c55c3a81-7a3a-4d95-b51f-60e7eadcfd28.png" width = "20%" height = "20%">
 
 
