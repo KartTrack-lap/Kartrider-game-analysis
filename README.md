@@ -5,7 +5,7 @@
 - 크레이지레이싱 카트라이더는 2004년에 서비스를 시작한 레이싱 비디오게임으로 18년째 많은 유저들에게 사랑을 받고 있습니다. 그러나 오랜 시간 서비스를 하고 있는 만큼 장점과 동시에 단점도 가지고 있습니다. 그 중 하나는 최근 출시된 스피드전 트랙들이 많이 플레이되지 않고 있다는 것입니다.
 - 실제로 최근 5년간 출시된 스피드전 트랙 44개중 32개는 스피드 개인전 상위 50개 트랙에 이름을 올리지 못했습니다.
 
-  <p align="center"><img src =https://user-images.githubusercontent.com/111565156/204594242-6d2f35c8-c6e3-47d8-b7ea-cb773e5d9394.png>
+  <img src =https://user-images.githubusercontent.com/111565156/204594242-6d2f35c8-c6e3-47d8-b7ea-cb773e5d9394.png>
 
 
 ## 2. 프로젝트 목적
@@ -27,10 +27,10 @@
 
 # 3️⃣ 사용 기술
 
-  <p align="center"><img src =https://user-images.githubusercontent.com/111565156/204595760-13f0047a-357f-430a-8cae-5bf901754166.png>
+  <img src =https://user-images.githubusercontent.com/111565156/204595760-13f0047a-357f-430a-8cae-5bf901754166.png>
 
 
-  <p align="center"><img src =https://user-images.githubusercontent.com/111565156/204595683-53f3bdc9-d30c-458a-b6b5-bac4c9a2df74.png>
+  <img src =https://user-images.githubusercontent.com/111565156/204595683-53f3bdc9-d30c-458a-b6b5-bac4c9a2df74.png>
   
 <br/>
 <br/>
@@ -40,7 +40,7 @@
 
 ## 1. 사용한 데이터
 
-  <p align="center"><img src =https://user-images.githubusercontent.com/111565156/204595889-4129b2e0-2117-4ceb-8f24-96c035043350.png>
+  <img src =https://user-images.githubusercontent.com/111565156/204595889-4129b2e0-2117-4ceb-8f24-96c035043350.png>
 
 
 ## 2. ERD 테이블
@@ -48,13 +48,13 @@ _*ERD와 관련하여 자세한 내용을 확인하고 싶으시면, [ERD 위키
 
 - ERD 구조
     
-    <p align="center"><img src =https://user-images.githubusercontent.com/111565156/204596261-d6ac7a68-5a90-4c2d-a94f-308c9750d80a.png>
+    <img src =https://user-images.githubusercontent.com/111565156/204596261-d6ac7a68-5a90-4c2d-a94f-308c9750d80a.png>
 
     
 - ERD 구조 설명
     
     
-    <p align="center"><img src =https://user-images.githubusercontent.com/111565156/204596067-5ed5931d-787f-4e60-9f7a-6e88f93f7f98.png>
+    <img src =https://user-images.githubusercontent.com/111565156/204596067-5ed5931d-787f-4e60-9f7a-6e88f93f7f98.png>
 
   
 <br/>
@@ -113,14 +113,12 @@ _*설문조사와 관련하여 자세한 내용을 확인하고 싶으시면, [�
 
 - 독립변수를 설정하기 위해 크레이지레이싱 카트라이더 유저를 대상으로 설문조사 진행했습니다.
      
-- 설문조사는 10/19~10/25 동안 진행하였고, 총 120명의 응답을 확보하였습니다. 이를 통해 유저가 트랙을 선택할 때 중요하게 생각하는 요소를 파악해 워드클라우드로 표현했습니다.
+- 설문조사는 10/19~10/25 동안 진행하였고, 총 120명의 응답을 확보하였습니다. 이를 통해 유저가 트랙을 선택할 때 중요하게 생각하는 요소를 파악해 워드클라우드로 표현했습니다.  
+  <img src =https://user-images.githubusercontent.com/111565156/204596933-accd40b1-4b4a-4d41-9434-14a92b40ee0c.png>
 
-<p align="center"><img src =https://user-images.githubusercontent.com/111565156/204596933-accd40b1-4b4a-4d41-9434-14a92b40ee0c.png>
 
-
-- 위의 워드클라우드를 반영하여 분석에 필요한 독립변수를 아래와 같이 선정하였습니다.
-    
-   <p align="center"><img src =https://user-images.githubusercontent.com/111565156/204596998-d0ff363b-d533-4459-b1a1-de17f8c726ac.png>
+- 위의 워드클라우드를 반영하여 분석에 필요한 독립변수를 아래와 같이 선정하였습니다.  
+  <img src =https://user-images.githubusercontent.com/111565156/204596998-d0ff363b-d533-4459-b1a1-de17f8c726ac.png>
 
     
 
@@ -142,11 +140,9 @@ _*설문조사와 관련하여 자세한 내용을 확인하고 싶으시면, [�
 
 ### 1) **종속변수가 ‘트랙 사용 수’인 회귀분석 진행.**
 _*종속변수가 `트랙 사용 수`인 회귀분석과 관련하여 자세한 내용을 확인하고 싶으시면, ['트랙 사용 수' 분석 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/06.-'%EC%A2%85%EC%86%8D-%EB%B3%80%EC%88%98-:-%ED%8A%B8%EB%9E%99-%EC%82%AC%EC%9A%A9-%EC%88%98'-%ED%9A%8C%EA%B7%80-%EB%B6%84%EC%84%9D)를 참고해주세요._
-     
-<p align="center"><img src =https://user-images.githubusercontent.com/111565156/204597334-361f303a-ca33-466f-8e6a-9239740ed725.png>
 
-
-- 분석 결과, 다음과 같은 회귀식을 도출하였습니다.
+- 다음과 같은 분석 결과를 도출하였습니다.
+  <img src =https://user-images.githubusercontent.com/111565156/204597334-361f303a-ca33-466f-8e6a-9239740ed725.png>
   ![image](https://user-images.githubusercontent.com/45919197/204792155-03322240-a611-474d-990b-7a4db24e4ad4.png)
 
 
@@ -159,23 +155,17 @@ _*종속변수가 `트랙 사용 수`인 회귀분석과 관련하여 자세한 
 ### 2) **종속변수가 ‘평균 주행시간’인 회귀분석 진행**
 _*종속변수가 `평균 주행 시간` 인 회귀분석과 관련하여 자세한 내용을 확인하고 싶으시면, ['평균 주행 시간' 분석 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/07.-'%EC%A2%85%EC%86%8D-%EB%B3%80%EC%88%98-:-%ED%8F%89%EA%B7%A0-%EC%A3%BC%ED%96%89-%EC%8B%9C%EA%B0%84'-%ED%9A%8C%EA%B7%80-%EB%B6%84%EC%84%9D)를 참고해주세요._
 
-<p align="center"><img src =https://user-images.githubusercontent.com/111565156/204597517-bb856d0a-39b8-4858-bbdc-e3869fab53e3.png>
-
-
-- 분석 결과, 다음과 같은 회귀식을 도출하였습니다.
-    
+- 다음과 같은 분석 결과를 도출하였습니다.
+  <img src =https://user-images.githubusercontent.com/111565156/204597517-bb856d0a-39b8-4858-bbdc-e3869fab53e3.png>
   ![image](https://user-images.githubusercontent.com/45919197/204791957-d66d70fc-3140-479d-a91f-da11254aacc8.png)
 
     
-<br/>
-특히 흥미로웠던 결과는 아래의 두가지 포인트입니다. 
-
-✅ `직선 구간 비율` 이 높을수록 `평균 주행 시간`이 늘어납니다. 
+- 특히 흥미로웠던 결과는 아래의 두가지 포인트입니다. 
+  * ✅ `직선 구간 비율` 이 높을수록 `평균 주행 시간`이 늘어납니다.  
       **즉, “`평균 주행 시간`을 줄이기 위해서는 `직선 구간 비율`을 줄여야 함”을 알 수 있습니다.** 
-
-✅ `내리막길 비율`이 높을수록 `평균 주행 시간`이 늘어납니다.
+  * ✅ `내리막길 비율`이 높을수록 `평균 주행 시간`이 늘어납니다.  
      **따라서 `평균 주행 시간`을 줄이기 위해서는 `내리막길 비율`을 줄여야 합니다.**
-<br/>
+
 <br/>
 
 ---
@@ -188,11 +178,8 @@ _*종속변수가 `평균 주행 시간` 인 회귀분석과 관련하여 자세
 ### 3) **종속변수가 ‘난이도’인 회귀분석 진행**
 _*종속변수가 `난이도` 인 회귀분석과 관련하여 자세한 내용을 확인하고 싶으시면, ['난이도' 분석 위키 페이지](https://github.com/KartTrack-lap/Kartrider-game-analysis/wiki/08.-'%EC%A2%85%EC%86%8D-%EB%B3%80%EC%88%98-:-%EB%82%9C%EC%9D%B4%EB%8F%84'-%ED%9A%8C%EA%B7%80-%EB%B6%84%EC%84%9D)를 참고해주세요._
 
-<p align="center"><img src =https://user-images.githubusercontent.com/111565156/204597648-993f748e-bf69-4e1d-96d7-39890dee3bfe.png>
-
-
-- 분석 결과 다음과 같은 회귀식을 얻었습니다.
-    
+- 다음과 같은 분석 결과를 도출하였습니다.
+  <img src =https://user-images.githubusercontent.com/111565156/204597648-993f748e-bf69-4e1d-96d7-39890dee3bfe.png>
   ![image](https://user-images.githubusercontent.com/45919197/204792534-18532c39-b38e-4ac3-b833-8c24ea825e99.png)
 
     
@@ -203,15 +190,11 @@ _*종속변수가 `난이도` 인 회귀분석과 관련하여 자세한 내용�
 
 ## 5. 분석 결과 정리
 
-분석 결과를 정리하자면 크게 다음과 같습니다.
-
-<p align="center"><img src =https://user-images.githubusercontent.com/111565156/204597744-f1b96034-d3e7-49b3-ad80-cad4569e1f86.png>
-
-1) `트랙 사용 수` 에는 `난이도`, `평균 주행시간`, `테마` 가 영향을 미친다.
-
-2) `평균 주행 시간` 에는 `내리막길 비율`, `예각 커브 개수` , `헤어핀 구간 개수`, `둔각 커브 개수`, `직선 구간 비율`, `펜스 구간 유무`, `고정 장애물 개수` 가 영향을 미친다.
-
-3) `난이도` 에는 `내리막길 개수`, `전체 직선 개수`, `전체 곡선 개수`, `헤어핀 구간 개수`, `총 장애물 개수`, `펜스 구간 유무`, `트랙 이동 개수`, `감속 트리거`, `점프 트리거` 가 영향을 미친다.
+- 분석 결과를 정리하자면 크게 다음과 같습니다.
+  * `트랙 사용 수` 에는 `난이도`, `평균 주행시간`, `테마` 가 영향을 미친다.
+  * `평균 주행 시간` 에는 `내리막길 비율`, `예각 커브 개수` , `헤어핀 구간 개수`, `둔각 커브 개수`, `직선 구간 비율`, `펜스 구간 유무`, `고정 장애물 개수` 가 영향을 미친다.
+  * `난이도` 에는 `내리막길 개수`, `전체 직선 개수`, `전체 곡선 개수`, `헤어핀 구간 개수`, `총 장애물 개수`, `펜스 구간 유무`, `트랙 이동 개수`, `감속 트리거`, `점프 트리거` 가 영향을 미친다.  
+  <img src =https://user-images.githubusercontent.com/111565156/204597744-f1b96034-d3e7-49b3-ad80-cad4569e1f86.png>
 
 ---
 
@@ -222,12 +205,12 @@ _*‘트랙 제작’과 관련 자세한 내용을 확인하고 싶으시면, [
 - 분석 결과를 활용하여 트랙 계산기를  개발하였습니다.
     [트랙 계산기 링크](https://track-calculator.bubbleapps.io/version-test/calculator)로 접속하면 트랙 계산기를 이용할 수 있습니다.  
     트랙 계산기 화면은 아래와 같이 구성되어 있습니다. 트랙 구성요소들을 계산기에 넣으면 평균 주행시간과 난이도를 알 수 있습니다 
-    <p align="center"><img src = "https://user-images.githubusercontent.com/111565156/204597897-c55c3a81-7a3a-4d95-b51f-60e7eadcfd28.png" width = "20%" height = "20%">
+    <img src = "https://user-images.githubusercontent.com/111565156/204597897-c55c3a81-7a3a-4d95-b51f-60e7eadcfd28.png" width = "20%" height = "20%">
 
 
-- 트랙 계산기를 활용하여 ‘빌리지 테마’의 ‘난이도2’ 트랙을 제작하였습니다. 
-- 팀 ‘카트 타고 출근’이 제작한 트랙 **‘빌리지 해마의 여행’** 입니다.
-  <p align="center"><img src =https://user-images.githubusercontent.com/111565156/204599654-65de149b-fd6d-4fb2-ba92-a52062836e5d.png>
+- 트랙 계산기를 활용하여 ‘빌리지 테마’의 ‘난이도2’ 트랙을 제작하였습니다.   
+  팀 ‘카트 타고 출근’이 제작한 트랙 **‘빌리지 해마의 여행’** 입니다.  
+  <img src =https://user-images.githubusercontent.com/111565156/204599654-65de149b-fd6d-4fb2-ba92-a52062836e5d.png>
 
 
   
